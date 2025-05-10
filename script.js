@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
 
 /* Typing Animation */
 
-var typed = new Typed('.typing', { strings: ["", "Web Designer", "Web Developer", "Graphic Designer", "Youtuber"], typeSpeed: 100, Backspeed: 60, loop: true })
+var typed = new Typed('.typing', { strings: ["", "Nick.ai"], typeSpeed: 100, Backspeed: 60, loop: true })
 
 /* Changing Aside Active Link */
 
