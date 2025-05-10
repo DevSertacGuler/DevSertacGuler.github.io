@@ -399,3 +399,30 @@ color-5.css
 }
 
 */
+
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-grid img {
+  width: calc(25% - 20px); /* Dört resim için yaklaşık %25 genişlik */
+  max-width: 200px; /* Her bir resmin maksimum genişliği (isteğe bağlı) */
+  height: auto; /* Orantılı yüksekliği korur */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    display: block;
+  }
+
+  .image-grid img {
+    width: 100%;
+    max-width: none; /* Mobil görünümde maksimum genişliği kaldır */
+    margin-bottom: 20px;
+  }
+}
