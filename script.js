@@ -94,5 +94,3 @@ function asideSectionTogglerBtn(){
     navTogglerBtn.classList.toggle('open');
     for(let i = 0; i < totalSection; i++) { allSection[i].classList.toggle('open'); }
 }
-
-
