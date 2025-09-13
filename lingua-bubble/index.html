@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua Bubble - Language Learning Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .language-card {
+            transition: all 0.3s ease;
+        }
+
+        .language-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .level-badge {
+            transition: all 0.2s ease;
+        }
+
+        .level-badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .privacy-section {
+            scroll-margin-top: 80px;
+        }
+
+        .contact-section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-comments text-purple-600 text-2xl"></i>
+                    <span class="font-bold text-xl text-gray-800">Lingua Bubble</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#app-content" class="text-gray-600 hover:text-purple-600 transition">App Content</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
+                    <a href="#privacy-policy" class="text-gray-600 hover:text-purple-600 transition">Privacy Policy</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-3 space-y-2">
+                <a href="#app-content" class="block text-gray-600 hover:text-purple-600 transition py-1">App Content</a>
+                <a href="#contact" class="block text-gray-600 hover:text-purple-600 transition py-1">Contact</a>
+                <a href="#privacy-policy" class="block text-gray-600 hover:text-purple-600 transition py-1">Privacy
+                    Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Lingua Bubble</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Fun Language Learning Games for Everyone</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#app-content"
+                    class="bg-white text-purple-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition">
+                    Explore Features
+                </a>
+                <a href="#privacy-policy"
+                    class="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-lg hover:bg-white hover:text-purple-700 transition">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="mt-12">
+                <i class="fas fa-language text-6xl opacity-20"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Content Section -->
+    <section id="app-content" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">App Content & Features</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+
+            <!-- Game Modules -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Game Modules</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-purple-600 mb-4">
+                            <i class="fas fa-spell-check text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Scrambled Word</h3>
+                        <p class="text-gray-600 mb-4">Unscramble letters to form the correct word. This module helps
+                            improve spelling and vocabulary recognition.</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                            <li>Letter rearrangement challenges</li>
+                            <li>Multiple difficulty levels</li>
+                            <li>Hints and support options</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-purple-600 mb-4">
+                            <i class="fas fa-fill-drip text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sentence Completion</h3>
+                        <p class="text-gray-600 mb-4">Complete sentences by filling in the scrambled word. This module
+                            enhances grammar and contextual understanding.</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                            <li>Contextual vocabulary practice</li>
+                            <li>Grammar structure reinforcement</li>
+                            <li>Sentence formation skills</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-purple-600 mb-4">
+                            <i class="fas fa-hammer text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sentence Builder</h3>
+                        <p class="text-gray-600 mb-4">Build complete sentences using given words. This module develops
+                            sentence construction and syntax skills.</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                            <li>Syntax and structure practice</li>
+                            <li>Word order understanding</li>
+                            <li>Creative language use</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Supported Languages</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇬🇧</div>
+                        <p class="font-medium">English</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇫🇷</div>
+                        <p class="font-medium">French</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇩🇪</div>
+                        <p class="font-medium">German</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇪🇸</div>
+                        <p class="font-medium">Spanish</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇮🇹</div>
+                        <p class="font-medium">Italian</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇵🇹</div>
+                        <p class="font-medium">Portuguese</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇷🇺</div>
+                        <p class="font-medium">Russian</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇰🇷</div>
+                        <p class="font-medium">Korean</p>
+                    </div>
+                    <div class="language-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="text-2xl mb-2">🇹🇷</div>
+                        <p class="font-medium">Turkish</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- English Levels Section -->
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">English Proficiency Levels</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">A1</p>
+                        <p class="text-sm text-gray-600">Beginner</p>
+                    </div>
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">A2</p>
+                        <p class="text-sm text-gray-600">Elementary</p>
+                    </div>
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">B1</p>
+                        <p class="text-sm text-gray-600">Intermediate</p>
+                    </div>
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">B2</p>
+                        <p class="text-sm text-gray-600">Upper-Intermediate</p>
+                    </div>
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">C1</p>
+                        <p class="text-sm text-gray-600">Advanced</p>
+                    </div>
+                    <div class="level-badge bg-purple-100 p-4 rounded-lg text-center">
+                        <p class="font-bold text-purple-700">C2</p>
+                        <p class="text-sm text-gray-600">Proficiency</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Information -->
+            <div class="mt-16 bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">About Lingua Bubble</h3>
+                <div class="space-y-4 text-gray-600">
+                    <p>Lingua Bubble is a completely free educational language learning application designed for users
+                        aged 18 and above. Our app offers three engaging game modules to help users improve their
+                        language skills in a fun and interactive way.</p>
+                    <p>Unlike many other apps, Lingua Bubble does not require any user registration or login. We believe
+                        in providing a hassle-free learning experience without collecting any personal data.</p>
+                    <p>Our backend provides content for each game in pages, and as you complete each item, the app shows
+                        them one by one. Once you finish all items in a set, the app automatically requests a new page
+                        of items from the backend, ensuring a continuous learning experience.</p>
+                    <p>All game modules are available for free in all supported languages and proficiency levels, making
+                        quality language education accessible to everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100 contact-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-envelope text-purple-600 text-2xl mr-4"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold">Email</h3>
+                        <p class="text-gray-600">dev.sertacguler@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-map-marker-alt text-purple-600 text-2xl mr-4"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold">Location</h3>
+                        <p class="text-gray-600">Ankara, Turkey</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-user text-purple-600 text-2xl mr-4"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold">Developer</h3>
+                        <p class="text-gray-600">Sertaç Güler</p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="text-gray-600 text-center">If you have any questions about Lingua Bubble or need support,
+                        please feel free to contact us using the email address above.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy-policy" class="py-16 privacy-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Privacy Policy</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold mb-6">Lingua Bubble Privacy Policy</h3>
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Introduction</h4>
+                        <p class="text-gray-600">This Privacy Policy outlines how Lingua Bubble handles data. We are
+                            committed to protecting your privacy and ensuring a safe user experience. This policy
+                            explains what information we do and do not collect, and how we use any non-personal data.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Data We Do Not Collect</h4>
+                        <p class="text-gray-600 mb-2">We do not collect any personally identifiable information from our
+                            users. This includes, but is not limited to:</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                            <li>Names</li>
+                            <li>Email addresses</li>
+                            <li>Phone numbers</li>
+                            <li>Device IDs</li>
+                            <li>Location data</li>
+                            <li>Any other personal information that could identify you</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Data We Collect (Non-Personal)</h4>
+                        <p class="text-gray-600">Our application may connect to a backend service to retrieve content
+                            for our games (Scrambled Word, Sentence Completion, Sentence Builder). This data includes
+                            the game content itself (words, sentences, etc.) in multiple languages. We do not link this
+                            data to individual users or devices. The purpose of this connection is solely to provide you
+                            with the game content you need to play.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">No Tracking or User Profiles</h4>
+                        <p class="text-gray-600">We do not track user behavior within the app and we do not build user
+                            profiles. Your activity is not logged or associated with any unique identifier. The data
+                            retrieval from our backend is a one-way process to deliver content to the app without
+                            storing any user-specific information on the server.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Backend Connection and Data Transfer</h4>
+                        <p class="text-gray-600">The only data exchange between your device and our backend service is
+                            the request and delivery of game content. This process does not involve the transfer of any
+                            personal or non-personal information about you, the user, to our servers.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Contact Information</h4>
+                        <p class="text-gray-600">If you have any questions about this Privacy Policy, please contact us
+                            at: dev.sertacguler@gmail.com</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Policy Updates</h4>
+                        <p class="text-gray-600">We may update this Privacy Policy from time to time. We encourage you
+                            to review this page periodically for any changes. Any changes will be effective immediately
+                            upon posting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-comments text-purple-400 text-2xl"></i>
+                        <span class="font-bold text-xl">Lingua Bubble</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Fun Language Learning Games for Everyone</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#app-content" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-gamepad text-xl"></i>
+                    </a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#privacy-policy" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Developed by <span class="text-white">Sertaç Güler</span> | For Educational Purposes Only</p>
+                <p class="mt-2">© 2023 Lingua Bubble. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+
+</html>
